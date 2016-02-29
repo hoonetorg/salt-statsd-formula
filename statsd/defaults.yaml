@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+statsd:
+  pkgs: 
+    - statsd
+  service:
+    name: statsd
+    state: running
+    enable: True
+  conffile: '/etc/statsd/config.js'
+  
+  # default settings
+  conf:
+    graphitePort: 2003
+    graphiteHost: "localhost"
+    port: 8125
